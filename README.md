@@ -2,44 +2,64 @@
 
 ## 📜 Description
 
-This Discord bot is designed to send direct messages (DMs) to all members of a server with a single command. Additionally, it rotates its status message every 5 seconds between two custom messages configured in the settings.
+This Discord bot is designed to send direct messages (DMs) to all members of a server with a single command.
 
 ## 🚀 Features
 
 - **Mass DM Sending**: Send a direct message to all server members with one command. 📩
-- **Status Message Rotation**: Changes the bot's status message every 5 seconds. 🔄
 - **Security**: Only the bot owner (specified in the config) can use the DM command. 🔐
 
 ## 🛠️ Prerequisites
 
 Before running this bot, ensure you have the following:
-- Node.js (version 18 or higher recommended) 🖥️
-- A valid Discord bot token 🎟️
-- Access to the Discord Developer Portal to configure your bot
+
+1. **Node.js**: A JavaScript runtime environment. Install Node.js from [nodejs.org](https://nodejs.org/) (version 18 or higher recommended). 🖥️
+2. **npm**: Node.js package manager, which comes bundled with Node.js. 📦
+3. **A valid Discord bot token**: Obtain this from the [Discord Developer Portal](https://discord.com/developers/applications). 🎟️
 
 ## 📥 Installation
 
 1. **Clone the repository** (if not already done):
     ```bash
-    git clone https://github.com/your-repository/discord-mass-dm-bot.git
+    git clone https://github.com/g0k1/Discord-Mass-DM-s.git
     cd discord-mass-dm-bot
     ```
 
-2. **Install dependencies**:
+2. **Install Node.js and npm**:
+
+   - **Windows**:
+     Download the installer from [Node.js official website](https://nodejs.org/) and follow the installation instructions.
+
+   - **macOS**:
+     You can use Homebrew to install Node.js and npm:
+     ```bash
+     brew install node
+     ```
+
+   - **Linux**:
+     Use a package manager like `apt` (Debian/Ubuntu) or `dnf` (Fedora):
+     ```bash
+     # For Debian/Ubuntu
+     sudo apt update
+     sudo apt install nodejs npm
+     
+     # For Fedora
+     sudo dnf install nodejs npm
+     ```
+
+3. **Install project dependencies**:
     ```bash
     npm install
     ```
 
-3. **Configure `config.json`**:
+4. **Configure `config.json`**:
     Create a `config.json` file in the root of your project with the following content:
     ```json
-    {
-      "ownerId": "your-owner-id",
-      "token": "your-bot-token",
-      "prefix": "!",
-      "StatusMessage1": "caca",
-      "StatusMessage2": "pipi"
-    }
+        {
+          "prefix": "YOU_PREFIX", 
+          "token": "YOUR_TOKEN",
+          "ownerId": "YOUR_DISCORD_ID"
+        }
     ```
     Replace the placeholder values with your actual bot information and preferred status messages.
 
@@ -51,23 +71,12 @@ Before running this bot, ensure you have the following:
     ```
 
 2. **Use Commands**:
-    - **`!dm <message>`**: Sends the specified message as a DM to all server members. Only the user with the ID matching `ownerId` in `config.json` can use this command.
+    - **`[YOU_PREFIX]dm <message>`**: Sends the specified message as a DM to all server members. Only the user with the ID matching `ownerId` in `config.json` can use this command.
 
 ## ⚠️ Notes
 
 - **Permissions**: Ensure the bot has the necessary permissions to send DMs to members.
 - **Discord Policy Compliance**: Please adhere to [Discord's Community Guidelines](https://discord.com/guidelines) and avoid spamming to prevent misuse of the bot.
-
-## 🐞 Troubleshooting
-
-If you encounter errors such as connection issues or permission problems, check the following:
-- Ensure the bot token is valid.
-- Verify the bot has the required permissions on the server.
-- Review the console output for detailed error messages.
-
-## 🤝 Contributing
-
-If you'd like to contribute to this project, feel free to open a pull request or report issues via the [GitHub repository](https://github.com/your-repository/discord-mass-dm-bot/issues).
 
 ---
 
